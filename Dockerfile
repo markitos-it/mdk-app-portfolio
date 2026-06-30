@@ -3,11 +3,11 @@ FROM golang:1.26-alpine AS builder
 WORKDIR /build
 
 
-ENV CGO_ENABLED=0
+ENV CGO_ENABLED=1
 ENV GOOS=linux
 ENV GO111MODULE=on
 
-RUN apk add --no-cache make git bash
+RUN apk add --no-cache make git bash gcc musl-dev
 
 COPY go.mod go.sum ./
 RUN go mod download
@@ -15,7 +15,8 @@ RUN go mod download
 COPY . .
 
 RUN echo "Building service at path: cmd/app/main.go"
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app cmd/app/main.go
+RUN GOOS=linux go build -a -o app cmd/app/main.go
+
 
 FROM alpine:3.22
 

@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-con-relayer
+  labels:
+    app: productor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productor
+  template:
+    metadata:
+      labels:
+        app: productor
+    spec:
+
+
+      volumes:
+        - name: outbox
+          emptyDir: {} 
+
+
+      securityContext:
+        fsGroup: 65534
+
+      imagePullSecrets:
+        - name: gcp-registry-secret
+
+      containers:
+        - name: relayer
+          image: us-central1-docker.pkg.dev/markitos-it-gcp-basico/images/mdk-event-relay:v0.0.3
+
+          env:
+            - name: BUS_TYPE
+              value: "mock"
+            - name: DB_PATH
+              value: "/var/lib/outbox/events.db"
+          volumeMounts:
+            - name: outbox
+              mountPath: /var/lib/outbox
+
+
+
+        - name: microservicio
+          image: us-central1-docker.pkg.dev/markitos-it-gcp-basico/images/mdk-app-portfolio:v0.0.1
+
+          env:
+            - name: EVENT_RELAY_DATABASE_PATH
+              value: "/var/lib/outbox/events.db"
+            - name: SERVER_ADDRESS
+              value: ":3000"
+
+          volumeMounts:
+            - name: outbox
+              mountPath: /var/lib/outbox
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservicio-con-relayer
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 31180
+  selector:
+    app: productor
+---
