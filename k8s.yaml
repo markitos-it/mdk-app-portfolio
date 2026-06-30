@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microservicio-con-relayer
+  name: application-using-relayer
   labels:
     app: productor
 spec:
@@ -15,26 +15,26 @@ spec:
         app: productor
     spec:
 
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
 
       volumes:
         - name: outbox
           emptyDir: {} 
-
-
-      securityContext:
-        fsGroup: 65534
 
       imagePullSecrets:
         - name: gcp-registry-secret
 
       containers:
         - name: relayer
-          image: us-central1-docker.pkg.dev/markitos-it-gcp-basico/images/mdk-event-relay:v0.0.3
+          image: us-central1-docker.pkg.dev/markitos-it-gcp-basico/images/mdk-event-relay:v0.0.4
 
           env:
             - name: BUS_TYPE
               value: "mock"
-            - name: DB_PATH
+            - name: EVENT_RELAY_DATABASE_PATH
               value: "/var/lib/outbox/events.db"
           volumeMounts:
             - name: outbox
@@ -42,8 +42,8 @@ spec:
 
 
 
-        - name: microservicio
-          image: us-central1-docker.pkg.dev/markitos-it-gcp-basico/images/mdk-app-portfolio:v0.0.1
+        - name: application
+          image: us-central1-docker.pkg.dev/markitos-it-gcp-basico/images/mdk-app-portfolio:v0.0.2
 
           env:
             - name: EVENT_RELAY_DATABASE_PATH
@@ -58,7 +58,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: microservicio-con-relayer
+  name: application-using-relayer
 spec:
   type: NodePort
   ports:
