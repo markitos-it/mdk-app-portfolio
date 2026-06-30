@@ -1,0 +1,397 @@
+{{ template "templates/en/start.html" . }}
+{{ template "templates/en/dock.html" . }}
+{{ template "templates/en/opencontent.html" . }}
+{{ template "templates/en/header.html" . }}
+
+
+        <!-- START HERO SECTION -->
+        <div class="bento-card card-hero wow animate__fadeInLeft">
+            <span class="card-number">01 / INSIGHTS</span>
+            <div class="badge-status">
+                <i class="fa-solid fa-circle"></i>
+                Neural Architecture Logs
+            </div>
+            <h1 class="hero-title">DECODING<br><span>DIGITAL</span><br>LOGIC.</h1>
+            <p class="hero-desc">Documenting technical breakthroughs, design philosophy, and the future of scalable engineering.</p>
+        </div>
+        <!-- END HERO SECTION -->
+
+        <!-- START STATS SECTION -->
+        <div class="bento-card card-feed-stats wow animate__fadeInRight">
+            <span class="card-number">02 / CORE</span>
+            <div class="stat-item mb-4">
+                <div class="stat-num">240</div>
+                <div class="stat-label">Neural Logs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">50k+</div>
+                <div class="stat-label">System Reads</div>
+            </div>
+        </div>
+        <!-- END STATS SECTION -->
+
+        <!-- START FEED GRID -->
+        <div class="blog-grid-wrapper col-12 container-fluid px-0">
+            <div class="row g-4" id="blog-feed">
+
+                <!-- FEATURED COVER CARD -->
+                <div class="col-lg-8">
+                    <article class="blog-featured wow animate__fadeInLeft" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#blogModal1" >
+                        <div class="bf-img">
+                            <img src="/assets/img/blog-1.jpg" alt="Neural Design Systems">
+                        </div>
+                        <div class="bf-gradient"></div>
+                        <div class="bf-content">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="post-tag">Engineering</span>
+                                <span class="post-read"><i class="fa-regular fa-clock me-1"></i>8 Min Read</span>
+                            </div>
+                            <h2><a href="#" data-bs-toggle="modal" data-bs-target="#blogModal1">Future of Neural Design Systems</a></h2>
+                            <div class="post-author-row d-flex align-items-center gap-2 mt-4">
+                                <img src="/assets/img/avatar-1.jpg" alt="Alex" class="rounded-circle" style="width:28px;height:28px;object-fit:cover;">
+                                <span>Marco Antonio</span>
+                                <span class="ms-auto">OCT 24, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- SIDE STACK -->
+                <div class="col-lg-4 d-flex flex-column gap-4">
+                    <article class="blog-side-card wow animate__fadeInRight" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#blogModal2">
+                        <div class="bsc-img">
+                            <img src="/assets/img/blog-2.jpg" alt="Quantum Hooks">
+                        </div>
+                        <div class="bsc-body">
+                            <span class="post-tag tag-hardware">Hardware</span>
+                            <h5><a href="#" data-bs-toggle="modal" data-bs-target="#blogModal2">Quantum UI Hooks</a></h5>
+                            <div class="d-flex align-items-center gap-2 mt-auto pt-3">
+                                <span class="post-read"><i class="fa-regular fa-clock me-1"></i>5 Min</span>
+                                <span class="post-date ms-auto">OCT 18, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="blog-side-card wow animate__fadeInRight" data-wow-delay="0.1s" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#blogModal3" >
+                        <div class="bsc-img">
+                            <img src="/assets/img/blog-3.jpg" alt="Visual Logic">
+                        </div>
+                        <div class="bsc-body">
+                            <span class="post-tag tag-logic">Logic</span>
+                            <h5><a href="#" data-bs-toggle="modal" data-bs-target="#blogModal3">Visual Logic Flow Systems</a></h5>
+                            <div class="d-flex align-items-center gap-2 mt-auto pt-3">
+                                <span class="post-read"><i class="fa-regular fa-clock me-1"></i>4 Min</span>
+                                <span class="post-date ms-auto">OCT 15, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ROW 2 -->
+                <div class="col-lg-4">
+                    <article class="blog-post-card wow animate__fadeInUp" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#blogModal4">
+                        <div class="bpc-img">
+                            <img src="/assets/img/blog-4.jpg" alt="Cyber Resilience">
+                            <span class="post-tag tag-security">Security</span>
+                        </div>
+                        <div class="bpc-body">
+                            <h5><a href="#" data-bs-toggle="modal" data-bs-target="#blogModal4">Cyber Resilience Protocols</a></h5>
+                            <div class="d-flex align-items-center gap-2 mt-auto pt-3">
+                                <span class="post-read"><i class="fa-regular fa-clock me-1"></i>6 Min</span>
+                                <span class="post-date ms-auto">OCT 10, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <article class="blog-post-card wow animate__fadeInUp" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#blogModal5" data-wow-delay="0.1s">
+                        <div class="bpc-img">
+                            <img src="/assets/img/blog-5.jpg" alt="Visual Analytics">
+                            <span class="post-tag tag-data">Data</span>
+                        </div>
+                        <div class="bpc-body">
+                            <h5><a href="#" data-bs-toggle="modal" data-bs-target="#blogModal5">The Power of Visual Data</a></h5>
+                            <div class="d-flex align-items-center gap-2 mt-auto pt-3">
+                                <span class="post-read"><i class="fa-regular fa-clock me-1"></i>7 Min</span>
+                                <span class="post-date ms-auto">OCT 5, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <article class="blog-post-card wow animate__fadeInUp" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#blogModal6" data-wow-delay="0.2s">
+                        <div class="bpc-img">
+                            <img src="/assets/img/blog-1-detail.jpg" alt="Design Architecture">
+                            <span class="post-tag tag-systems">Systems</span>
+                        </div>
+                        <div class="bpc-body">
+                            <h5><a href="#" data-bs-toggle="modal" data-bs-target="#blogModal6">The Architecture of Design</a></h5>
+                            <div class="d-flex align-items-center gap-2 mt-auto pt-3">
+                                <span class="post-read"><i class="fa-regular fa-clock me-1"></i>9 Min</span>
+                                <span class="post-date ms-auto">SEP 28, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- HIDDEN POOL -->
+                <div class="blog-load-more-pool d-none">
+                    <div class="col-lg-8 d-flex">
+                        <article class="blog-featured w-100" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#blogModal7">
+                            <div class="bf-img">
+                                <img src="/assets/img/blog-6.jpg" alt="Scalable Grids">
+                            </div>
+                            <div class="bf-gradient"></div>
+                            <div class="bf-content">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <span class="post-tag">Systems</span>
+                                    <span class="post-read"><i class="fa-regular fa-clock me-1"></i>12 Min Read</span>
+                                </div>
+                                <h2><a href="#" data-bs-toggle="modal" data-bs-target="#blogModal7">The Math of Scalable Grids</a></h2>
+                                <div class="post-author-row d-flex align-items-center gap-2 mt-4">
+                                    <img src="/assets/img/avatar-1.jpg" alt="Alex" class="rounded-circle" style="width:28px;height:28px;object-fit:cover;">
+                                    <span>Marco Antonio</span>
+                                    <span class="ms-auto">OCT 12, 2026</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4 d-flex">
+                        <article class="blog-featured w-100" style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#blogModal8">
+                            <div class="bf-img">
+                                <img src="/assets/img/blog-7.jpg" alt="Hybrid Cloud">
+                            </div>
+                            <div class="bf-gradient"></div>
+                            <div class="bf-content">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <span class="post-tag">Cloud</span>
+                                    <span class="post-read"><i class="fa-regular fa-clock me-1"></i>9 Min Read</span>
+                                </div>
+                                <h2><a href="#" data-bs-toggle="modal" data-bs-target="#blogModal8">Hybrid Cloud Architecture</a></h2>
+                                <div class="post-author-row d-flex align-items-center gap-2 mt-4">
+                                    <img src="/assets/img/avatar-1.jpg" alt="Alex" class="rounded-circle" style="width:28px;height:28px;object-fit:cover;">
+                                    <span>Marco Antonio</span>
+                                    <span class="ms-auto">OCT 8, 2026</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LOAD MORE TRIGGER -->
+            <div class="blog-protocol-container wow animate__fadeInUp">
+                <button class="load-more-btn" id="load-more-trigger">
+                    <i class="fa-solid fa-plus-circle spinner-icon"></i>
+                    <span>Load More Articles</span>
+                </button>
+            </div>
+        </div>
+        <!-- END FEED GRID -->
+    </div>
+
+    <!-- START BLOG MODALS -->
+    
+    <!-- Blog Modal 1 -->
+    <div class="modal fade velixo-modal" id="blogModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="badge-status m-0">Engineering</span>
+                        <span class="small opacity-50 fw-bold">OCT 24, 2026</span>
+                    </div>
+                    <h2 class="modal-title mb-4">The Future of Neural Design Systems</h2>
+                    <img src="/assets/img/blog-1.jpg" class="img-fluid rounded-4 mb-5" alt="Neural Design Systems Detail">
+                    <div class="blog-content">
+                        <p>In the rapidly evolving landscape of digital interfaces, the convergence of neural biological principles and computer-aided design is creating a new paradigm. We call this <strong>Neural Design Architecture</strong>.</p>
+                        <p>Unlike traditional static design systems, neural systems are designed to be "alive" — adapting in real-time to user behavior, cognitive load, and environmental factors. This requires a complete rethink of how we handle component logic and state management.</p>
+                        <blockquote class="my-5 p-4 border-start border-4 border-primary bg-light rounded-2">
+                            "The goal is not to build tools that work for users, but to build ecosystems that evolve with them."
+                        </blockquote>
+                        <h4 class="mt-5 mb-3 text-uppercase">The Three Pillars of Neural Design</h4>
+                        <ol>
+                            <li class="mb-3"><strong>Cognitive Efficiency</strong>: Reducing friction at every touchpoint.</li>
+                            <li class="mb-3"><strong>Dynamic Scaling</strong>: Component logic that adjusts complexity based on user expertise.</li>
+                            <li><strong>Predictive Intelligence</strong>: Using ML hooks to preload assets and paths before the interaction happens.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal 2 -->
+    <div class="modal fade velixo-modal" id="blogModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="badge-status m-0">Hardware</span>
+                        <span class="small opacity-50 fw-bold">OCT 18, 2026</span>
+                    </div>
+                    <h2 class="modal-title mb-4">Quantum UI Hooks in Hardware</h2>
+                    <img src="/assets/img/blog-2.jpg" class="img-fluid rounded-4 mb-5" alt="Quantum UI Hooks Detail">
+                    <div class="blog-content">
+                        <p>Integrating high-level UI logic with bare-metal hardware requires more than just efficient code; it requires a deep understanding of signal latency and tactile feedback loops.</p>
+                        <p>Our latest breakthrough in "Quantum Hooks" allows for a zero-latency bridge between React-based interfaces and embedded sensor arrays, enabling a level of physical-digital synchronicity previously thought impossible.</p>
+                        <h4 class="mt-5 mb-3 text-uppercase">Hardware Synergy</h4>
+                        <p>By bypassing traditional OS-level interrupts, we can pipe interaction data directly into the render loop. This ensures that when a user moves a physical slider, the digital representation is updated within 2ms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal 3 -->
+    <div class="modal fade velixo-modal" id="blogModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="badge-status m-0">Logic</span>
+                        <span class="small opacity-50 fw-bold">OCT 15, 2026</span>
+                    </div>
+                    <h2 class="modal-title mb-4">Visual Logic Flow Systems</h2>
+                    <img src="/assets/img/blog-3.jpg" class="img-fluid rounded-4 mb-5" alt="Visual Logic Flow Detail">
+                    <div class="blog-content">
+                        <p>Visualizing complex logic flows is the next frontier in developer experience. At Markitos, we've developed a node-based architecture that maps technical complexity to artistic visual patterns.</p>
+                        <p>This allows architects to "see" bottlenecks before they are even coded. By treating data flow as a visual river, we can optimize systems using intuitive pattern recognition.</p>
+                        <blockquote class="my-5 p-4 border-start border-4 border-primary bg-light rounded-2">
+                            "Architecture is just logic made visible."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal 4 -->
+    <div class="modal fade velixo-modal" id="blogModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="badge-status m-0">Security</span>
+                        <span class="small opacity-50 fw-bold">OCT 10, 2026</span>
+                    </div>
+                    <h2 class="modal-title mb-4">Cyber Resilience Protocols</h2>
+                    <img src="/assets/img/blog-4.jpg" class="img-fluid rounded-4 mb-5" alt="Cyber Resilience Detail">
+                    <div class="blog-content">
+                        <p>In an age of increasing digital threats, cyber resilience is no longer optional. Our latest protocols focus on self-healing infrastructures and proactive threat detection using neural pattern matching.</p>
+                        <p>We've implemented a layered defense strategy that protects sensitive data at the architectural level, ensuring that even if one node is compromised, the rest of the ecosystem remains secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal 5 -->
+    <div class="modal fade velixo-modal" id="blogModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="badge-status m-0">Data</span>
+                        <span class="small opacity-50 fw-bold">OCT 5, 2026</span>
+                    </div>
+                    <h2 class="modal-title mb-4">The Power of Visual Data</h2>
+                    <img src="/assets/img/blog-5.jpg" class="img-fluid rounded-4 mb-5" alt="Visual Data Detail">
+                    <div class="blog-content">
+                        <p>Data visualization is the bridge between raw information and actionable insights. By using advanced 3D rendering techniques, we can transform complex datasets into intuitive visual landscapes.</p>
+                        <p>This allows decision-makers to identify trends and anomalies with unprecedented clarity, leading to faster and more accurate strategic choices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal 6 -->
+    <div class="modal fade velixo-modal" id="blogModal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="badge-status m-0">Systems</span>
+                        <span class="small opacity-50 fw-bold">SEP 28, 2026</span>
+                    </div>
+                    <h2 class="modal-title mb-4">The Architecture of Design</h2>
+                    <img src="/assets/img/blog-1-detail.jpg" class="img-fluid rounded-4 mb-5" alt="Architecture Analysis Detail">
+                    <div class="blog-content">
+                        <p>True design is not just how it looks, but how it works at the structural level. We explore the intersection of architectural principles and digital product design.</p>
+                        <p>By applying classical engineering concepts to modern software, we can build products that are not only beautiful but also resilient and highly performant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal 7 -->
+    <div class="modal fade velixo-modal" id="blogModal7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="badge-status m-0">Systems</span>
+                        <span class="small opacity-50 fw-bold">OCT 12, 2026</span>
+                    </div>
+                    <h2 class="modal-title mb-4">The Math of Scalable Grids</h2>
+                    <img src="/assets/img/blog-6.jpg" class="img-fluid rounded-4 mb-5" alt="Scalable Grids Detail">
+                    <div class="blog-content">
+                        <p>Scalability starts with a solid mathematical foundation. We dive deep into the algorithms that power modern grid systems, ensuring consistent layouts across all screen resolutions.</p>
+                        <p>Understanding the underlying geometry allows us to create flexible, high-density interfaces that maintain their integrity even as complexity grows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Modal 8 -->
+    <div class="modal fade velixo-modal" id="blogModal8" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5 pt-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <span class="badge-status m-0">Cloud</span>
+                        <span class="small opacity-50 fw-bold">OCT 8, 2026</span>
+                    </div>
+                    <h2 class="modal-title mb-4">Hybrid Cloud Architecture</h2>
+                    <img src="/assets/img/blog-7.jpg" class="img-fluid rounded-4 mb-5" alt="Hybrid Cloud Detail">
+                    <div class="blog-content">
+                        <p>Hybrid cloud solutions offer the best of both worlds: the security of private infrastructure and the scalability of public cloud providers.</p>
+                        <p>We discuss the architectural challenges of synchronizing data across disparate environments and the best practices for maintaining high availability in a hybrid setup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END BLOG MODALS -->
+
+{{ template "templates/en/footer.html" . }}
+{{ template "templates/en/js.html" . }}
+{{ template "templates/en/end.html" . }}

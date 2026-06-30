@@ -1,0 +1,162 @@
+{{ template "templates/en/start.html" . }}
+{{ template "templates/en/dock.html" . }}
+{{ template "templates/en/opencontent.html" . }}
+{{ template "templates/en/header.html" . }}
+
+        <div class="bento-card card-hero wow animate__fadeInLeft">
+            <span class="card-number">01 / CONNECTION</span>
+            <div class="badge-status">
+                <i class="fa-solid fa-circle"></i>
+                Open for Strategic Partnerships
+            </div>
+            <h1 class="hero-title">BACKEND<br><span>REGISTRATION</span>.</h1>
+            <p class="hero-desc">Ready to architect high-performance digital ecosystems. Submit a project brief and receive a response within 24 hours.</p>
+        </div>
+        <div class="bento-card card-protocol wow animate__fadeInUp" style="height: auto; min-height: 100%;">
+            <span class="card-number">02 / INTAKE</span>
+            
+            
+            
+                <div id="success-message" class="alert alert-success d-none mb-4" role="alert">
+                    Registration successful! Check your email for access credentials.
+                </div>
+                <div id="error-message" class="alert alert-danger d-none mb-4" role="alert">
+                    An error occurred during registration. Please try again later.
+                </div>
+                <div id="validation-message" class="alert alert-warning d-none mb-4" role="alert"></div>
+
+            
+            <div class="row g-0">
+                <div class="col-lg-4 mb-4 mb-lg-0 pe-lg-4 d-flex flex-column">
+                    <div class="form-intro-panel h-100 d-flex flex-column">
+                        <div class="fip-label">Registration Details</div>
+                        <h2 class="fip-title">Registration<br>Details.</h2>
+                        <div class="fip-checklist mt-auto">
+                            <div class="fip-check-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>data is never shared</span>
+                            </div>
+                            <div class="fip-check-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>no promotional emails</span>
+                            </div>
+                            <div class="fip-check-item">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>maximum respect and security</span>
+                            </div>
+                        </div>
+                        <div class="fip-signature">MARKITOS &times; 2026</div>
+                    </div>
+                </div>
+                <div class="col-lg-8 d-flex flex-column justify-content-between">
+                    <form id="contact-form" action="/register/submit" method="POST" class="velixo-form d-flex flex-column justify-content-between" style="min-height: 100%;">
+                        <div class="row g-4 flex-grow-1">
+                            <div class="col-md-6">
+                                <div class="vx-field"> 
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" class="vx-input" placeholder="Alex Johnson" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="vx-field">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="vx-input" placeholder="hello@yourcompany.com" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="vx-field">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" class="vx-input" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="vx-field">
+                                    <label for="repassword">Repeat Password</label>
+                                    <input type="password" id="repassword" name="repassword" class="vx-input" required>
+                                </div>
+                            </div>
+
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mt-4 pt-4" style="border-top: 1px solid var(--velixo-border); background: inherit; position: relative; z-index: 10;">
+                            <p class="small opacity-40 fw-bold mb-0"> 
+                                <i class="fa-solid fa-shield-halved me-2"></i>Your data is encrypted and never shared.
+                            </p>
+                            <button type="submit" class="btn btn-primary rounded-pill px-5 py-3 fw-bold text-uppercase">
+                                Register <i class="fa-solid fa-bolt-lightning ms-2"></i>
+                            </button>
+                        </div>
+
+
+                        </div>
+                        
+                    </form>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const form = document.getElementById('contact-form');
+                            const password = document.getElementById('password');
+                            const repassword = document.getElementById('repassword');
+                            const validationMsg = document.getElementById('validation-message');
+
+                            if (!form) return false;
+
+                            form.addEventListener('submit', function(event) {
+                                let errorMessage = '';
+
+                                if (password && (password.value.length < 6 || password.value.length > 20)) {
+                                    errorMessage = 'Password must be between 6 and 20 characters long.';
+                                }
+                                else if (password && repassword && password.value !== repassword.value) {
+                                    errorMessage = 'Passwords do not match.';
+                                }
+
+                                if (errorMessage) {
+                                    event.preventDefault();
+                                    event.stopImmediatePropagation();
+
+                                    if (validationMsg) {
+                                        validationMsg.textContent = errorMessage;
+                                        validationMsg.classList.remove('d-none');
+                                        
+                                        // Ajuste fino del scroll de foco al mensaje para evitar desborde visual rápido
+                                        validationMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                    } else {
+                                        alert(errorMessage);
+                                    }
+
+                                     return false;
+                                } else {
+                                    if (validationMsg) validationMsg.classList.add('d-none');
+                                }
+                            });
+
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const status = urlParams.get('status');
+                            
+                            if (status === 'success' || status === 'error') {
+                                const msgId = status === 'success' ? 'success-message' : 'error-message';
+                                const msgEl = document.getElementById(msgId);
+                                const submitBtn = document.querySelector('#contact-form button[type="submit"]');
+                                
+                                if (msgEl) {
+                                    msgEl.classList.remove('d-none');
+                                    if (submitBtn && status === 'success') submitBtn.classList.add('d-none');
+                                    
+                                    setTimeout(() => {
+                                        msgEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                    }, 100);
+
+                                    setTimeout(() => {
+                                        msgEl.classList.add('d-none');
+                                        if (submitBtn && status === 'success') submitBtn.classList.remove('d-none');
+                                    }, 10000);
+                                }
+                            }
+                        });                        
+                    </script>
+                </div>
+
+            </div>
+        </div>
+        {{ template "templates/en/closecontent.html" . }}
+{{ template "templates/en/footer.html" . }}
+{{ template "templates/en/js.html" . }}
+{{ template "templates/en/end.html" . }}

@@ -1,0 +1,61 @@
+<div class="nav-container animate__animated animate__fadeInUp">
+    <nav class="nav-dock">
+        <a href="/" class="{{if eq .Path "/"}}dock-item active{{else}}dock-item{{end}}">
+            <i class="fa-solid fa-house-user"></i>
+            <span>Home</span>
+        </a>
+        <a href="/resume" class="{{if eq .Path "/resume"}}dock-item active{{else}}dock-item{{end}}">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>Resume</span>
+        </a>
+        <a href="/works" class="{{if eq .Path "/works"}}dock-item active{{else}}dock-item{{end}}">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Projects</span>
+        </a>
+        <a href="/blog" class="{{if eq .Path "/blog"}}dock-item active{{else}}dock-item{{end}}">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Feed</span>
+        </a>
+        <a href="/contact" class="{{if eq .Path "/contact"}}dock-item active{{else}}dock-item{{end}}">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+        <div class="language-selector">
+            <a href="{{.Path}}" title="English" class="{{if eq .Lang "en"}}language-option active{{else}}language-option{{end}}">🇬🇧</a>
+            <a href="/es{{if eq .Path "/"}}/{{else}}{{.Path}}{{end}}" title="Español" class="{{if eq .Lang "es"}}language-option active{{else}}language-option{{end}}">🇪🇸</a>
+        </div>
+
+        <a href="/event-client/say-hello" class="active dock-item" style="background-color: brown;">
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Publish</span>
+        </a>
+
+    </nav>
+</div>
+
+
+{{if .ShowSayHelloToast}}
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 5000">
+  <div id="sayHelloToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <i class="fa-solid fa-satellite-dish me-2 text-primary"></i>
+      <strong class="me-auto">System Signal</strong>
+      <small>Just now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      OK, hello! Signal received.
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toastElement = document.getElementById('sayHelloToast');
+    
+    if (toastElement) {
+      const toast = new bootstrap.Toast(toastElement);
+      toast.show();
+    }
+  });
+</script>
+{{end}}

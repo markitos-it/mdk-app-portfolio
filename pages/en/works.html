@@ -1,0 +1,382 @@
+{{ template "templates/en/start.html" . }}
+{{ template "templates/en/dock.html" . }}
+{{ template "templates/en/opencontent.html" . }}
+{{ template "templates/en/header.html" . }}
+
+        <!-- START HERO SECTION -->
+        <div class="bento-card card-hero wow animate__fadeInLeft">
+            <span class="card-number">01 / PORTFOLIO</span>
+            <div class="badge-status">
+                <i class="fa-solid fa-circle"></i>
+                Crafting Digital Assets
+            </div>
+            <h1 class="hero-title">ENGINEERING<br /><span>TECHNICAL</span><br />MASTERY.</h1>
+            <p class="hero-desc">A curated selection of high-density interfaces and scalable architectures developed for global industry leaders.</p>
+        </div>
+        <!-- END HERO SECTION -->
+
+        <!-- START STATS SECTION -->
+        <div class="bento-card card-stats wow animate__fadeInRight">
+            <span class="card-number">02 / CORE</span>
+            <div class="stat-item mb-4">
+                <div class="stat-num">25</div>
+                <div class="stat-label">Repositories Managed</div>
+            </div>
+            <div class="stat-item mb-4">
+                <div class="stat-num">20 / 5</div>
+                <div class="stat-label">Private / Public</div>
+                <ul class="list-unstyled mt-3">
+                    <li class="stat-label">Google Cloud</li>
+                    <li class="stat-label">Terraform (IaC)</li>
+                    <li class="stat-label">Kubernetes</li>
+                    <li class="stat-label">GitOps / DevSecOps</li>
+                    <li class="stat-label">Go - bash - js/ts...</li>
+                </ul>
+            </div>
+        </div>
+        <!-- END STATS SECTION -->
+
+        <!-- START PROJECTS HUB -->
+        <div class="bento-card card-projects-hub col-12 wow animate__fadeInUp">
+            <span class="card-number">03 / LOOKUP</span>
+
+            <div class="hub-header d-flex flex-wrap justify-content-between align-items-center mb-5 gap-4">
+                <div class="hub-title">
+                    <h3 class="text-uppercase mb-1">Project Hub.</h3>
+                    <p class="small opacity-50 fw-bold mb-0">Discover neural architectures and scalable systems</p>
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="*">All Work</button>
+                    <button class="filter-btn" data-filter=".golang">Development</button>
+                    <button class="filter-btn" data-filter=".devsecops">DevSecOps</button>
+                    <button class="filter-btn" data-filter=".architecture">Architecture</button>
+                    <button class="filter-btn" data-filter=".systems">Systems</button>
+                </div>
+            </div>
+
+            <div class="isotope-grid">
+                <div class="grid-sizer"></div>
+
+                
+                <!-- Proyecto 1: Certificación Terraform -->
+                <div class="isotope-item devsecops systems certification">
+                    <div class="card-work-inner wow animate__fadeInUp">
+                        <div class="work-img">
+                            <img src="/assets/img/hashicorp-certified-terraform-associate-003.png" alt="Terraform Associate Certification" />
+                        </div>
+                        <div class="work-content">
+                            <span class="work-cat text-uppercase">Certification / IaC</span>
+                            <h4 class="work-title text-uppercase" role="button" data-bs-toggle="modal" data-bs-target="#projectModal1">Terraform Associate</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: markitos-it-gogoversion -->
+                <div class="isotope-item tools systems golang development">
+                    <div class="card-work-inner wow animate__fadeInUp" data-wow-delay="0.1s">
+                        <div class="work-img">
+                            <img src="/assets/img/project-2.webp" alt="GoGoVersion CLI" />
+                        </div>
+                        <div class="work-content">
+                            <span class="work-cat text-uppercase">Tools / Golang</span>
+                            <h4 class="work-title text-uppercase" role="button" data-bs-toggle="modal" data-bs-target="#projectModal2">GoGoVersion CLI</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: markitos-svc-boilerplates -->
+                <div class="isotope-item architecture backend golang development">
+                    <div class="card-work-inner wow animate__fadeInUp" data-wow-delay="0.2s">
+                        <div class="work-img">
+                            <img src="/assets/img/project-3.webp" alt="Microservices Boilerplates" />
+                        </div>
+                        <div class="work-content">
+                            <span class="work-cat text-uppercase">Architecture / Core</span>
+                            <h4 class="work-title text-uppercase" role="button" data-bs-toggle="modal" data-bs-target="#projectModal3">Svc Boilerplates</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4: markitos-svc-boilerplates-rest -->
+                <div class="isotope-item architecture backend golang development">
+                    <div class="card-work-inner wow animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="work-img">
+                            <img src="/assets/img/project-4.webp" alt="REST API Boilerplate" />
+                        </div>
+                        <div class="work-content">
+                            <span class="work-cat text-uppercase">Architecture / REST</span>
+                            <h4 class="work-title text-uppercase" role="button" data-bs-toggle="modal" data-bs-target="#projectModal4">Svc Boilerplates REST</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5: markitos-svc-boilerplates-grpc -->
+                <div class="isotope-item architecture backend golang development">
+                    <div class="card-work-inner wow animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="work-img">
+                            <img src="/assets/img/project-5.webp" alt="gRPC Boilerplate" />
+                        </div>
+                        <div class="work-content">
+                            <span class="work-cat text-uppercase">Architecture / gRPC</span>
+                            <h4 class="work-title text-uppercase" role="button" data-bs-toggle="modal" data-bs-target="#projectModal5">Svc Boilerplates gRPC</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6: cka-kubernetes-study -->
+                <div class="isotope-item devsecops systems cloud">
+                    <div class="card-work-inner wow animate__fadeInUp" data-wow-delay="0.5s">
+                        <div class="work-img">
+                            <img src="/assets/img/project-6.webp" alt="CKA Kubernetes Study Guide" />
+                        </div>
+                        <div class="work-content">
+                            <span class="work-cat text-uppercase">Cloud Native / DevOps</span>
+                            <h4 class="work-title text-uppercase" role="button" data-bs-toggle="modal" data-bs-target="#projectModal6">CKA Kubernetes Study</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- END PROJECTS HUB -->
+    </div>
+
+    <!-- START PROJECT MODALS -->
+
+<!-- Project Modal 1: Terraform Certification -->
+<div class="modal fade velixo-modal" id="projectModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <span class="badge-status mb-3">Certification / IaC</span>
+                <h2 class="modal-title mb-4">HashiCorp Certified: Terraform Associate</h2>
+                <img src="/assets/img/hashicorp-certified-terraform-associate-003.png" class="img-fluid rounded-4 mb-4" alt="Terraform Certification Detail" />
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <h4 class="text-uppercase mb-3">Project Brief</h4>
+                        <p class="text-muted">Official certification issued by HashiCorp that validates comprehensive expertise in Infrastructure as Code (IaC). The scope covers cloud resource management across public clouds, the standard Terraform workflow (init, plan, apply, destroy), secure state management, modularization, and advanced usage of variables and functions to architect resilient multi-cloud environments.</p>
+                        <a href="https://www.credly.com/badges/f4d4d539-9f58-4a67-9356-29724af6f3a5/public_url" target="_blank" class="btn btn-primary mt-3">Verify Credential on Credly</a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-info-list">
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Issuer</span>
+                                <span class="value fw-bold">HashiCorp (Credly)</span>
+                            </div>
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Status</span>
+                                <span class="value fw-bold">Verified / Active</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Tech Stack</span>
+                                <span class="value fw-bold">Terraform, IaC, Multi-Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Modal 2: markitos-it-gogoversion -->
+<div class="modal fade velixo-modal" id="projectModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <span class="badge-status mb-3">Tools / Golang</span>
+                <h2 class="modal-title mb-4">GoGoVersion CLI Tool</h2>
+                <img src="/assets/img/project-2.webp" class="img-fluid rounded-4 mb-4" alt="GoGoVersion CLI Detail" />
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <h4 class="text-uppercase mb-3">Project Brief</h4>
+                        <p class="text-muted">A native command-line interface (CLI) tool engineered in Go to streamline release automation workflows. Purpose-built for seamless integration into CI/CD pipelines to automatically calculate, increment, and tag software versions based on Semantic Versioning (SemVer) or custom Git conventions with blazing fast performance.</p>
+                        <a href="https://github.com/markitos-it/markitos-it-gogoversion" target="_blank" class="btn btn-primary mt-3">View Repository</a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-info-list">
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Scope</span>
+                                <span class="value fw-bold">Automation / CI/CD</span>
+                            </div>
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Open Source</span>
+                                <span class="value fw-bold">Yes</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Tech Stack</span>
+                                <span class="value fw-bold">Go (Golang), Git, CLI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Modal 3: markitos-svc-boilerplates -->
+<div class="modal fade velixo-modal" id="projectModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <span class="badge-status mb-3">Architecture / Core</span>
+                <h2 class="modal-title mb-4">Microservices Boilerplate Core</h2>
+                <img src="/assets/img/project-3.webp" class="img-fluid rounded-4 mb-4" alt="Svc Boilerplates Detail" />
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <h4 class="text-uppercase mb-3">Project Brief</h4>
+                        <p class="text-muted">The core structural backbone and central ecosystem designed to standardize and accelerate enterprise microservices development. It enforces Clean Architecture and Hexagonal Architecture principles, strictly isolating domain, application, and infrastructure layers. It includes production-ready Docker configurations and shared abstraction wrappers for backend services.</p>
+                        <a href="https://github.com/markitos-public/markitos-svc-boilerplates" target="_blank" class="btn btn-primary mt-3">View Repository</a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-info-list">
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Project Type</span>
+                                <span class="value fw-bold">Base Architecture</span>
+                            </div>
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Pattern</span>
+                                <span class="value fw-bold">Clean Architecture</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Tech Stack</span>
+                                <span class="value fw-bold">Docker, Microservices, Core</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Modal 4: markitos-svc-boilerplates-rest -->
+<div class="modal fade velixo-modal" id="projectModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <span class="badge-status mb-3">Architecture / REST</span>
+                <h2 class="modal-title mb-4">Svc Boilerplate REST API</h2>
+                <img src="/assets/img/project-4.webp" class="img-fluid rounded-4 mb-4" alt="REST API Boilerplate Detail" />
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <h4 class="text-uppercase mb-3">Project Brief</h4>
+                        <p class="text-muted">An enterprise-grade boilerplate specialized for building microservices that expose HTTP/REST interfaces. Built following Clean Architecture workflows, it natively implements optimized routing, essential cross-cutting middlewares (structured logging, CORS policies, rate limiting, and metrics), strict JSON payload validation, and a standardized HTTP response format.</p>
+                        <a href="https://github.com/markitos-public/markitos-svc-boilerplates-rest" target="_blank" class="btn btn-primary mt-3">View Repository</a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-info-list">
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Interface</span>
+                                <span class="value fw-bold">REST (HTTP)</span>
+                            </div>
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Data Format</span>
+                                <span class="value fw-bold">JSON</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Tech Stack</span>
+                                <span class="value fw-bold">HTTP, REST, Middlewares</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Modal 5: markitos-svc-boilerplates-grpc -->
+<div class="modal fade velixo-modal" id="projectModal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <span class="badge-status mb-3">Architecture / gRPC</span>
+                <h2 class="modal-title mb-4">Svc Boilerplate gRPC Services</h2>
+                <img src="/assets/img/project-5.webp" class="img-fluid rounded-4 mb-4" alt="gRPC Boilerplate Detail" />
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <h4 class="text-uppercase mb-3">Project Brief</h4>
+                        <p class="text-muted">High-performance boilerplate specifically tailored for low-latency, synchronous inter-service communication (east-west traffic) using gRPC. Features an automated Protocol Buffers (Protobuf) compiler configuration to strictly define service contracts (`.proto`) and optimizes efficient data serialization and streaming over persistent HTTP/2 connections.</p>
+                        <a href="https://github.com/markitos-public/markitos-svc-boilerplates-grpc" target="_blank" class="btn btn-primary mt-3">View Repository</a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-info-list">
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Protocol</span>
+                                <span class="value fw-bold">gRPC / HTTP/2</span>
+                            </div>
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Serialization</span>
+                                <span class="value fw-bold">Protocol Buffers</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Tech Stack</span>
+                                <span class="value fw-bold">gRPC, Protobuf, High Perf</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project Modal 6: cka-kubernetes-study -->
+<div class="modal fade velixo-modal" id="projectModal6" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 p-md-5">
+                <span class="badge-status mb-3">Cloud Native / DevOps</span>
+                <h2 class="modal-title mb-4">CKA Kubernetes Study Guide</h2>
+                <img src="/assets/img/project-6.webp" class="img-fluid rounded-4 mb-4" alt="Kubernetes Study Detail" />
+                <div class="row g-4">
+                    <div class="col-md-8">
+                        <h4 class="text-uppercase mb-3">Project Brief</h4>
+                        <p class="text-muted">A comprehensive engineering handbook and practical laboratory log dedicated to preparing for the Certified Kubernetes Administrator (CKA) exam by the Cloud Native Computing Foundation (CNCF). It includes automation deployment scripts, local cluster labs, advanced `kubectl` cheat sheets, and deeply documented deep dives into core components, networking (CNI), storage (CSI), security (RBAC), troubleshooting, and etcd backups.</p>
+                        <a href="https://github.com/markitos-it/cka-kubernetes-study" target="_blank" class="btn btn-primary mt-3">View Repository</a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-info-list">
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Category</span>
+                                <span class="value fw-bold">DevOps / SRE</span>
+                            </div>
+                            <div class="info-item mb-3">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Target Cert</span>
+                                <span class="value fw-bold">CKA (CNCF)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label d-block small opacity-50 text-uppercase fw-bold">Tech Stack</span>
+                                <span class="value fw-bold">Kubernetes, Linux, Containerd</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ template "templates/en/footer.html" . }}
+{{ template "templates/en/js.html" . }}
+{{ template "templates/en/end.html" . }}
