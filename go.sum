@@ -1,4 +1,2 @@
-github.com/markitos-it/mdk-event-relay-client v0.0.3 h1:urt4ATEPKwpOUChqYh4SXw2wS703n0I7asL/nRbU+jA=
-github.com/markitos-it/mdk-event-relay-client v0.0.3/go.mod h1:5kmxUn04dKszEtrC/qYv+bkm/6NHBfZUQu+kcOLySs0=
-github.com/mattn/go-sqlite3 v1.14.47 h1:jOBI62gS7nKeZv+as1oGEy0+1qISgXwH/QBlR6KbfIo=
-github.com/mattn/go-sqlite3 v1.14.47/go.mod h1:6JTjA44L93a0QCyJef5YvlPoKXntQPjzWv5gtm9sB6w=
+github.com/markitos-it/mdk-event-relay-client v0.0.1 h1:N6LYWQrScWMuuykv7+Q7SsZdKI2KvfFN7O7bHPBsUQc=
+github.com/markitos-it/mdk-event-relay-client v0.0.1/go.mod h1:5kmxUn04dKszEtrC/qYv+bkm/6NHBfZUQu+kcOLySs0=
