@@ -25,9 +25,8 @@
             <a href="/es{{if eq .Path "/"}}/{{else}}{{.Path}}{{end}}" title="Español" class="{{if eq .Lang "es"}}language-option active{{else}}language-option{{end}}">🇪🇸</a>
         </div>
 
-        <a href="/event-client/say-hello" class="active dock-item" style="background-color: brown;">
-            <i class="fa-solid fa-arrow-right"></i>
-            <span>Publish</span>
+        <a href="/event-client/say-hello" class="dock-item" style="opacity: 0.2;">
+            <i class="fa-solid fa-satellite-dish"></i>  
         </a>
 
     </nav>
@@ -35,15 +34,15 @@
 
 
 {{if .ShowSayHelloToast}}
-<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 5000">
-  <div id="sayHelloToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast-container position-fixed top-50 start-50 translate-middle p-3" style="z-index: 5000">
+  <div id="sayHelloToast" class="toast show toast-gradient-border" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <i class="fa-solid fa-satellite-dish me-2 text-primary"></i>
-      <strong class="me-auto">System Signal</strong>
-      <small>Just now</small>
+      <strong class="me-auto text-dark">System Signal</strong>
+      <small class="text-dark">Just now</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-    <div class="toast-body">
+    <div class="toast-body text-dark">
       OK, hello! Signal received.
     </div>
   </div>

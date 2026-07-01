@@ -3867,3 +3867,38 @@ textarea.vx-input {
 .vx-demo-3 .vx-3-identity .border-bottom {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+/* Custom Toast with Gradient Border */
+.toast-gradient-border {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box; /* Crucial for the effect to work with padding */
+  z-index: 1;
+  background-color: var(--velixo-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); /* Safari support */
+}
+
+.toast-gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+  z-index: -1;
+  margin: -2px; /* Must be negative of the border-width */
+  border-radius: inherit; /* Inherit border-radius from the toast */
+  background: linear-gradient(90deg, var(--velixo-primary), var(--velixo-secondary), var(--velixo-primary));
+  background-size: 200% 100%;
+  animation: gradient-scroll 3s linear infinite;
+}
+
+@keyframes gradient-scroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}

@@ -142,7 +142,12 @@ func (a app) handleEventClientSayHelloRequest(w http.ResponseWriter, r *http.Req
 		return
 	}
 
-	http.Redirect(w, r, "/?say-hello=enga", http.StatusSeeOther)
+	lang, _ := detectLanguageAndPath(r.URL.Path)
+	redirectPath := "/"
+	if lang == "es" {
+		redirectPath = "/es"
+	}
+	http.Redirect(w, r, fmt.Sprintf("%s?say-hello=enga", redirectPath), http.StatusSeeOther)
 }
 
 func (a app) handleRegisterSubmit(w http.ResponseWriter, r *http.Request) {
